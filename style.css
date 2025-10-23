@@ -1,0 +1,208 @@
+/* -------------- General Styles -------------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #ddd;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------- Navbar on the right side -------------- */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-shadow: -3px 0 8px rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+
+nav a {
+  color: #00d9ff;
+  text-decoration: none;
+  margin: 1rem 0;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+/* -------------- Content wrapper with navbar space -------------- */
+.content {
+  margin-right: 220px; /* leave space for navbar */
+  padding: 2rem;
+}
+
+/* -------------- Homepage Section -------------- */
+.homepage {
+  padding: 5rem 3rem;
+  background: #111;
+  text-align: center;
+}
+
+.homepage h1 {
+  color: #00d9ff;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.homepage p {
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.8;
+}
+
+.cta-btn {
+  text-decoration: none;
+  background: #00d9ff;
+  color: #111;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #00ffff;
+}
+
+/* -------------- About & Contact -------------- */
+.about, .contact {
+  padding: 5rem 3rem;
+  background: #111;
+  margin-bottom: 2rem;
+}
+
+.about h2, .contact h2 {
+  text-align: center;
+  color: #00d9ff;
+  margin-bottom: 2rem;
+}
+
+/* Centered text */
+.justified {
+  text-align: center;
+  line-height: 1.8;
+  color: #ccc;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  list-style: none;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 0;
+}
+
+.contact-info li {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+/* -------------- Services Section -------------- */
+.services {
+  padding: 5rem 3rem;
+  background: #222;
+  color: #eee;
+  margin-bottom: 2rem;
+}
+
+.services h2 {
+  text-align: center;
+  color: #00d9ff;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+/* Each service block */
+.service {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(0,217,255,0.2);
+}
+
+.service h3 {
+  color: #00d9ff;
+  margin-bottom: 1rem;
+}
+
+.service p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.service .price {
+  font-weight: 700;
+  color: #00ffff;
+  font-size: 1.2rem;
+}
+
+/* -------------- Portfolio Section -------------- */
+.portfolio {
+  padding: 5rem 3rem;
+  background: #111;
+  color: #eee;
+  text-align: center;
+}
+
+.portfolio h2 {
+  color: #00d9ff;
+  margin-bottom: 3rem;
+}
+
+.portfolio .images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.portfolio img {
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,217,255,0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  nav {
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: none;
+  }
+
+  nav a {
+    margin: 0 1rem;
+  }
+
+  .content {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .portfolio .images {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
